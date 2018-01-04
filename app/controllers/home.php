@@ -6,12 +6,15 @@ class home extends Controller
 {
 	public function index()
 	{
-		echo "Home";
+		$user = User::all();
+		return $this->view('home/index',$user);
 	}
+
 	public function error()
 	{
 		return $this->view('404');
 	}
+
 	public function get($id)
 	{
 		$user = User::where('id', $id)->first();

@@ -2,12 +2,12 @@
 <div class="main">
   <div class="hipsum">
     <div class="jumbotron">
-      <h1 id="hello,-world!">Hello admin!<a class="anchorjs-link" href="#hello,-world!"><span class="anchorjs-icon"></span></a></h1>
-      <p>Page Admin, version test mvc php</p>
-      <p><a class="btn btn-primary" data-toggle="modal" data-target="#show-add" role="button">Add User</a></p>
-    </div>
-    <div style="padding-bottom: 30px;">
-      <p>List User.</p>
+      <div class="box-title">
+          <h2>Manager User</h2>
+      </div>
+      <p><a class="btn btn-success" data-toggle="modal" data-target="#show-add" role="button">
+      <i class="fa fa-plus-circle" aria-hidden="true"></i> Add User
+      </a></p>
       <table class="table table-bordered display" cellspacing="0" width="100%" id="dttable">
         <thead>
               <tr>
@@ -16,7 +16,7 @@
                   <th>Email</th>
                   <th>Gender</th>
                   <th>Phone</th>
-                  <th>Avatar</th>
+                  <th>Age</th>
                   <th>Active</th>
                   <th>Action</th>
               </tr>
@@ -28,13 +28,14 @@
                   <th>Email</th>
                   <th>Gender</th>
                   <th>Phone</th>
-                  <th>Avatar</th>
+                  <th>Age</th>
                   <th>Active</th>
                   <th>Action</th>
               </tr>
           </tfoot>
       </table>
     </div>
+  </div>
   </div>
 </div>
 <!-- Modal Update-->
@@ -63,6 +64,10 @@
                 <div class="form-group">
                     <label for="recipient-name" class="control-label">Phone</label>
                     <input type="text" class="form-control" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="recipient-name" class="control-label">Age</label>
+                    <input type="text" class="form-control" id="age" name="age">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -98,6 +103,10 @@
                 <div class="form-group">
                     <label for="recipient-name" class="control-label">Phone</label>
                     <input type="text" class="form-control" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="recipient-name" class="control-label">Age</label>
+                    <input type="text" class="form-control" id="age" name="age">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -149,12 +158,14 @@
       var email  = currentRow.find("td:eq(2)").text();
       var gender = currentRow.find("td:eq(3)").text();
       var phone  = currentRow.find("td:eq(4)").text();
+      var age    = currentRow.find("td:eq(4)").text();
       var modal = $(this);
       modal.find('.modal-body #id').val(id);
       modal.find('.modal-body #name').val(name);
       modal.find('.modal-body #email').val(email);
       modal.find('.modal-body #gender').val(gender);
       modal.find('.modal-body #phone').val(phone);
+      modal.find('.modal-body #phone').val(age);
     });
     /* Send request update Ajax*/
     $("#form-update").on( "submit", function( ) {
@@ -240,9 +251,7 @@
             datatable.ajax.reload();
             $('#show-add').modal('hide');
             $.notify(data, "success");
-        })
-        $('#tag-name-add').val('');
-        $('#slug-add').val('');
+        });
     });
   });
 </script>

@@ -14,14 +14,17 @@
     <span>Close</span>
   </a>
   <div class="logo">
-    Simple Admin
+    MVC PHP PROJECT
   </div>
 </div>
 <div class="sidebar">
   <ul>
-    <li><a href="#"><i class="fa fa-desktop"></i><span>Desktop</span></a></li>
-    <li><a href="#"><i class="fa fa-server"></i><span>Server</span></a></li>
-    <li><a href="#"><i class="fa fa-calendar"></i><span>Calendar</span></a></li>
-    <li><a href="#"><i class="fa fa-envelope-o"></i><span>Messages</span></a></li>
-    <li><a href="<?php echo HTTP_ROOT ?>/admin/logout"><i class="fa fa-sign-out"></i><span>Sign Out</span></a></li>
+    <li><a href="<?php echo HTTP_ROOT ?>"><i class="fa fa-home"></i><span>Home</span></a></li>
+    <li><a href="<?php echo HTTP_ROOT ?>/contact"><i class="fa fa-address-book"></i><span>About</span></a></li>
+    
+    <?php if(!Session::get('loggedIn')):?>
+      <li><a href="<?php echo HTTP_ROOT;?>/login"><i class="fa fa-sign-in"></i><span>Login To Cpanel</span></a></li>
+    <?php else:?>
+      <li><a href="<?php echo HTTP_ROOT ?>/admin/logout"><i class="fa fa-sign-out"></i><span>Sign Out</span></a></li>
+    <?php endif;?>
 </div>

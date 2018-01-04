@@ -75,7 +75,7 @@ section {
     border-right: 1px solid #e7ebe7; }
   section input[type="submit"] {
     color: #fff;
-    background: #ffc948;
+    background: #3498DB;
     border: none;
     outline: none;
     padding: 0 30px;
@@ -91,7 +91,7 @@ section {
     border-bottom-right-radius: 5px;
     cursor: pointer; }
     section input[type="submit"]:hover {
-      background: #e5b131; }
+      background: #0b6daf; }
   section img {
     padding: 20px 0; }
 
