@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="css/contact.css">
+<link rel="stylesheet" type="text/css" href="<?php echo(PUBLIC_PATH)?>/css/contact.css">
 <div class="main">
   	<div class="hipsum">
 	    <div class="jumbotron">

@@ -165,7 +165,7 @@
       modal.find('.modal-body #email').val(email);
       modal.find('.modal-body #gender').val(gender);
       modal.find('.modal-body #phone').val(phone);
-      modal.find('.modal-body #phone').val(age);
+      modal.find('.modal-body #age').val(age);
     });
     /* Send request update Ajax*/
     $("#form-update").on( "submit", function( ) {

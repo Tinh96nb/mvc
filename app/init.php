@@ -19,6 +19,15 @@ define('HTTP_ROOT',
     str_replace(
         $_SERVER['DOCUMENT_ROOT'],
         '',
+        str_replace('\\', '/', INC_ROOT)
+    )
+);
+// Root path for assets
+define('PUBLIC_PATH',
+    'http://'.$_SERVER['HTTP_HOST'].
+    str_replace(
+        $_SERVER['DOCUMENT_ROOT'],
+        '',
         str_replace('\\', '/', INC_ROOT).'/public'
     )
 );

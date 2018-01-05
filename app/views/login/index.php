@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo HTTP_ROOT ?>/css/login.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo PUBLIC_PATH ?>/css/login.css">
 	<title>Login</title>
 </head>
 <body>
